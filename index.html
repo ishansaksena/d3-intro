@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>D3 Introduction</title>
+
+        <!-- Libraries -->
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery.min.js"></script>
+        <!-- D3 -->
+        <script src="http://d3js.org/d3.v4.js"></script>
+
+        <!-- Bootstrap, ignore for the tutorial -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Our files -->
+        <!-- main.css -->
+        <link rel="stylesheet" href="css/main.css" />
+
+        <!-- index.js -->
+        <script src="js/index.js"></script>
+    </head>
+
+    <body>
+        <section id="introduction">
+            <div class="container">            
+                <h1>D3 Introduction</h1>
+            </div>
+        </section>
+
+        <section id="question-one">
+            <div class="container">
+                <h2>Look around first!</h2>
+                <p class='considerations'>
+                    Before you start, look around the code for a little bit. Skim over what we imported in the head of the HTML. 
+                    We have D3.js, jquery and even bootstrap. 
+                    We'll focus on D3.js for this tutorial though :).
+                    We've also linked our own css and javascript files. 
+                </p>
+                <p class='considerations'>
+                    You can find the CSS files in the css folder and javascript in the js folder. 
+                    There's also a few datasets in the data folder. 
+                </p>
+            </div>
+            <div class="container">
+                <h2>Let's try to add a circle to the page!</h2>
+                <p class='considerations'>
+                    There's an svg element below. 
+                    <a href="https://www.w3schools.com/html/html5_svg.asp" target="_blank">SVG elements</a> 
+                    can contain lines, circles, rectangles, polygons and more.  
+                </p>
+            </div>
+        </section>
+
+        
+
+
+        <!-- SVG Element to append one element to -->
+        <svg id='one-element'></svg>
+
+        <!-- SVG Element to append dummy data to -->
+        <svg id='dummy-data'></svg>
+
+        <!-- It's usually good practice to put your visualization in a div -->
+        <!-- We can append the SVG element from the javascript itself -->
+        <!-- Visualization -->
+        <div id="vis"></div>
+
+
+        <footer>
+            <div class="container">
+                <p>
+                    Made by Ishan Saksena with &lt;3.
+                </p>
+            </div>
+        </footer>
+
+    </body>
+
+</html>
