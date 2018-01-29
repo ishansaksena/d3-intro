@@ -79,5 +79,5 @@ person.favorites.foods[1]; // returns 'salad', the first element in the 'foods' 
     This is all you need to get started. 
     We'll learn more javascript as we go. 
     
-    Move on to the files viz-1, viz-2 ...
+    Move on to the files viz-1 ...
 */

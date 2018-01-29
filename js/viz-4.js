@@ -1,9 +1,10 @@
 // 4
 // Let's try it with real data
+
 $(function () {
     // Load data
     d3.csv("data/cereal.csv", function (error, data) {
-
+        
         // change string (from CSV) into number format
         data.forEach(function (d) {
             d.Calories = +d.Calories;
@@ -32,7 +33,7 @@ $(function () {
 
         // setup fill color
         var cValue = function (d) { return d.Manufacturer; },
-            color = d3.scaleOrdinal(d3.schemeCategory10);;
+            color = d3.scaleOrdinal(d3.schemeCategory10);
 
         // Select the element from the HTML DOM. 
         var svg = d3.select("#from-data");
