@@ -3,17 +3,22 @@
 
 $(function () {
     // Load data
+    // Here data contains the contents of the csv
     d3.csv("data/cereal.csv", function (error, data) {
-        
+
         // change string (from CSV) into number format
         data.forEach(function (d) {
             d.Calories = +d.Calories;
             d["Protein (g)"] = +d["Protein (g)"];
+
+            // Uncomment this to see the data. 
             // console.log(d);
         });
 
         // Width and height of the visualization.
         var width = 600, height = 400, margin = 20;
+
+        // Calculate the highest x and y values. 
         var xMax = d3.max(data, function (d) { return +d.Calories });
         var yMax = d3.max(data, function (d) { return d["Protein (g)"] });
 
@@ -47,7 +52,6 @@ $(function () {
             .attr("r", 3.5)
             .attr("cx", xMap)
             .attr("cy", yMap)
-            // .style("fill", function (d) { return color(cValue(d)); });
             .style("fill", 'blue');
     });
 })

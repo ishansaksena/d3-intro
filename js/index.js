@@ -51,7 +51,7 @@ beBoundless();
 
 // Taking in arguments is as simple as this :)
 function beBoundlessest(num) {
-    for (i = 0; i < num; i++) { 
+    for (i = 0; i < num; i++) {
         console.log("we can print multiple times toooooo");
     }
 }

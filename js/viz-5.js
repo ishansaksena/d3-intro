@@ -12,21 +12,16 @@ $(function () {
      * axis - sets up axis
      */
 
-    
     var yScale = d3.scaleLinear().range([0, height]);
     var xScale = d3.scaleLinear().range([0, width]);
 
     // setup x 
     var xValue = function (d) { return d.Calories; }, // data -> value
-        // xScale = d3.scaleLinear().range([0, width]), // value -> display
         xMap = function (d) { return xScale(xValue(d)); }; // data -> display
-        // xAxis = d3.svg.axis().scale(xScale).orient("bottom");
 
     // setup y
     var yValue = function (d) { return d["Protein (g)"]; }, // data -> value
-        // yScale = d3.scale.linear().range([height, 0]), // value -> display
         yMap = function (d) { return yScale(yValue(d)); }; // data -> display
-        // yAxis = d3.svg.axis().scale(yScale).orient("left");
     
 
     // setup fill color
@@ -45,7 +40,6 @@ $(function () {
         .attr("class", "tooltip")
         .style("opacity", 0);
 
-    console.log("reading data");
     // load data
     d3.csv("data/cereal.csv", function (error, data) {
         
@@ -59,30 +53,6 @@ $(function () {
         // don't want dots overlapping axis, so add in buffer to data domain
         xScale.domain([d3.min(data, xValue) - 1, d3.max(data, xValue) + 1]);
         yScale.domain([d3.min(data, yValue) - 1, d3.max(data, yValue) + 1]);
-
-        // // x-axis
-        // svg.append("g")
-        //     .attr("class", "x axis")
-        //     .attr("transform", "translate(0," + height + ")")
-        //     .call(xAxis)
-        //     .append("text")
-        //     .attr("class", "label")
-        //     .attr("x", width)
-        //     .attr("y", -6)
-        //     .style("text-anchor", "end")
-        //     .text("Calories");
-
-        // // y-axis
-        // svg.append("g")
-        //     .attr("class", "y axis")
-        //     .call(yAxis)
-        //     .append("text")
-        //     .attr("class", "label")
-        //     .attr("transform", "rotate(-90)")
-        //     .attr("y", 6)
-        //     .attr("dy", ".71em")
-        //     .style("text-anchor", "end")
-        //     .text("Protein (g)");
 
         // Add the X Axis
         svg.append("g")
@@ -102,6 +72,7 @@ $(function () {
             .attr("cx", xMap)
             .attr("cy", yMap)
             .style("fill", function (d) { return color(cValue(d)); })
+            // Ignore for this tutorial
             .on("mouseover", function (d) {
                 tooltip.transition()
                     .duration(200)

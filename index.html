@@ -10,7 +10,7 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <!-- D3 -->
-    <script src="http://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
 
     <!-- Bootstrap, ignore for the tutorial -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
@@ -23,7 +23,7 @@
     <!-- index.js -->
     <script src="js/index.js"></script>
 
-    Go through these in order :)
+    <!-- Go through these in order :) -->
     <script src="js/viz-1.js"></script>
     <script src="js/viz-2.js"></script>
     <script src="js/viz-3.js"></script>
@@ -42,16 +42,19 @@
         <div class="container">
             <h2>Look around first!</h2>
             <p class='considerations'>
-                Before you start, look around the code for a little bit. Skim over what we imported in the head of the HTML. We have D3.js,
-                jquery and even bootstrap. We'll focus on D3.js for this tutorial though :). We've also linked our own css
-                and javascript files.
+                Before you start, look around the code for a little bit. 
+                Skim over what we imported in the head of the HTML. We have D3.js,
+                jquery and even bootstrap. We'll focus on D3.js for this tutorial though :). 
+                We've also linked our own css and javascript files.
             </p>
             <p class='considerations'>
-                You can find the CSS files in the css folder and javascript in the js folder. There's also a few datasets in the data folder.
+                You can find the CSS files in the css folder and javascript in the js folder. 
+                There's also a dataset about cereal in the data folder.
             </p>
 
             <p class='considerations'>
                 Read through index.html and index.js to proceed with the tutorial.
+                There's a quick introduction to jquery in viz-1.js.
             </p>
         </div>
     </section>
@@ -63,7 +66,8 @@
                 There's an svg element in the HTML below.
                 <a href="https://www.w3schools.com/html/html5_svg.asp" target="_blank">SVG elements</a>
                 can contain lines, circles, rectangles, polygons and more. 
-                Look at index.js to continue.
+                Using SVGs gives us very fine control of every pixel in the visualization.
+                Look at <strong>viz-2.js</strong> to continue.
             </p>
         </div>
 
@@ -73,24 +77,66 @@
         </div>    
     </section>
 
+    <section id="question-one">
+        <div class="container">
+            <h2>Let's try to draw something from dummy data</h2>
+            <p class='considerations'>
+                Here we'll make some dummy data and make a corresponding circle
+                for every data point. 
+                There's an SVG element below. 
+                Take a look at <strong>viz-3.js</strong>. 
+            </p>
+        </div>
 
-    
+        <!-- SVG Element to append dummy data svg to -->
+        <svg id='dummy-data'></svg>         
+            
+    </section>
 
-    <!-- SVG Element to append dummy data svg to -->
-    <svg id='dummy-data'></svg>
+    <section id="question-one">
+        <div class="container">
+            <h2>Let's bring it from real data.</h2>
+            <p class='considerations'>
+                We'll open cereal.csv and add a corresponding circle for each data point. 
+                Take a look at <strong>viz-4.js</strong>
+            </p>
 
-    <!-- Appending elements from real data -->
-    <svg id='from-data'></svg>
+            <p class='considerations'>
+                Use can use d3.csv to read a csv file, d3.json to read a json file.
+            </p>
+        </div>
 
-    <!-- It's usually good practice to put your visualization in a div -->
-    <!-- This makes styling your page easier in the long run -->
-    <!-- We can append the SVG element from the javascript itself -->
-    <!-- Visualization -->
-    <div id="vis-basic"></div>
+        <!-- Appending elements from real data -->
+        <svg id='from-data'></svg>       
+            
+    </section>
+
+    <section id="question-one">
+        <div class="container">
+            <h2>We can do better :)</h2>
+            <p class='considerations'>
+                We add axes, color, labels and hover tooltips. 
+                Take a look at <strong>viz-5.js.</strong>
+                This is a big jump and a lot to process, so don't worry if you're stuck :). 
+            </p>
+        </div>
+        
+        <!-- It's usually good practice to put your visualization in a div -->
+        <!-- This makes styling your page easier in the long run -->
+        <!-- We can append the SVG element from the javascript itself -->
+        <!-- Visualization -->
+        <div id="vis-basic"></div>
+        
+    </section>
 
     <section id="question-one">
         <div class="container">
             <h2>Where to from here?</h2>
+            <p class='considerations'>
+                If some, or a lot of it didn't make sense, don't worry. 
+                We'll go through more of this in the next few labs.    
+            </p>
+
             <p class='considerations'>
                 Check out Michael Freeman's 
                 <a href="https://info474-s17.github.io/book/introduction-to-d3-js.html" target="_blank">book</a>
