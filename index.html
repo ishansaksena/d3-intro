@@ -1,82 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>D3 Introduction</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D3 Introduction</title>
 
-        <!-- Libraries -->
-        <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery.min.js"></script>
-        <!-- D3 -->
-        <script src="http://d3js.org/d3.v4.js"></script>
+    <!-- Libraries -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <!-- D3 -->
+    <script src="http://d3js.org/d3.v4.js"></script>
 
-        <!-- Bootstrap, ignore for the tutorial -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Bootstrap, ignore for the tutorial -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
 
-        <!-- Our files -->
-        <!-- main.css -->
-        <link rel="stylesheet" href="css/main.css" />
+    <!-- Our files -->
+    <!-- main.css -->
+    <link rel="stylesheet" href="css/main.css" />
 
-        <!-- index.js -->
-        <script src="js/index.js"></script>
-    </head>
+    <!-- index.js -->
+    <script src="js/index.js"></script>
 
-    <body>
-        <section id="introduction">
-            <div class="container">            
-                <h1>D3 Introduction</h1>
-            </div>
-        </section>
+    <!-- Go through these in order :) -->
+    <script src="js/viz-1.js"></script>
+    <script src="js/viz-2.js"></script>
+    <script src="js/viz-3.js"></script>
+    <script src="js/viz-4.js"></script>
+    <script src="js/viz-5.js"></script>
+</head>
 
-        <section id="question-one">
-            <div class="container">
-                <h2>Look around first!</h2>
-                <p class='considerations'>
-                    Before you start, look around the code for a little bit. Skim over what we imported in the head of the HTML. 
-                    We have D3.js, jquery and even bootstrap. 
-                    We'll focus on D3.js for this tutorial though :).
-                    We've also linked our own css and javascript files. 
-                </p>
-                <p class='considerations'>
-                    You can find the CSS files in the css folder and javascript in the js folder. 
-                    There's also a few datasets in the data folder. 
-                </p>
-            </div>
-            <div class="container">
-                <h2>Let's try to add a circle to the page!</h2>
-                <p class='considerations'>
-                    There's an svg element below. 
-                    <a href="https://www.w3schools.com/html/html5_svg.asp" target="_blank">SVG elements</a> 
-                    can contain lines, circles, rectangles, polygons and more.  
-                </p>
-            </div>
-        </section>
+<body>
+    <section id="introduction">
+        <div class="container">
+            <h1>D3 Introduction</h1>
+        </div>
+    </section>
+
+    <section id="question-one">
+        <div class="container">
+            <h2>Look around first!</h2>
+            <p class='considerations'>
+                Before you start, look around the code for a little bit. Skim over what we imported in the head of the HTML. We have D3.js,
+                jquery and even bootstrap. We'll focus on D3.js for this tutorial though :). We've also linked our own css
+                and javascript files.
+            </p>
+            <p class='considerations'>
+                You can find the CSS files in the css folder and javascript in the js folder. There's also a few datasets in the data folder.
+            </p>
+
+            <p class='considerations'>
+                Read through index.html and index.js to proceed with the tutorial.
+            </p>
+        </div>
 
         
+    </section>
 
+    <section id="question-one">
+        <div class="container">
+            <h2>Let's try to add a circle to the page!</h2>
+            <p class='considerations'>
+                There's an svg element in the HTML below.
+                <a href="https://www.w3schools.com/html/html5_svg.asp" target="_blank">SVG elements</a>
+                can contain lines, circles, rectangles, polygons and more. 
+                Look at index.js to continue.
+            </p>
+        </div>
 
         <!-- SVG Element to append one element to -->
-        <svg id='one-element'></svg>
-
-        <!-- SVG Element to append dummy data to -->
-        <svg id='dummy-data'></svg>
-
-        <!-- It's usually good practice to put your visualization in a div -->
-        <!-- We can append the SVG element from the javascript itself -->
-        <!-- Visualization -->
-        <div id="vis"></div>
+        <div class="svg-container">
+            <svg id='one-element'></svg>
+        </div>    
+    </section>
 
 
-        <footer>
-            <div class="container">
-                <p>
-                    Made by Ishan Saksena with &lt;3.
-                </p>
-            </div>
-        </footer>
+    
 
-    </body>
+    <!-- SVG Element to append dummy data svg to -->
+    <svg id='dummy-data'></svg>
+
+    <!-- Appending elements from real data -->
+    <svg id='from-data'></svg>
+
+    <!-- It's usually good practice to put your visualization in a div -->
+    <!-- This makes styling your page easier in the long run -->
+    <!-- We can append the SVG element from the javascript itself -->
+    <!-- Visualization -->
+    <div id="vis"></div>
+
+    <section id="question-one">
+        <div class="container">
+            <h2>Where to from here?</h2>
+            <p class='considerations'>
+                Check out Michael Freeman's 
+                <a href="https://info474-s17.github.io/book/introduction-to-d3-js.html" target="_blank">book</a>
+                 on D3 here. 
+                Wanna see how to make some common visualization?
+                Just google it and follow a link to 
+                <a href="https://bl.ocks.org/" target="_blank">bl.ocks.org</a>  
+            </p>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <p>
+                Made by Ishan Saksena with &lt;3.
+            </p>
+        </div>
+    </footer>
+
+</body>
 
 </html>
