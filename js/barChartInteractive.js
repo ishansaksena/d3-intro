@@ -26,6 +26,13 @@ $(function () {
     var data = d3.tsv("data/letters.tsv", type, function (error, data) {
         if (error) throw error;
 
+        // We moved everything from here to render. VVV
+        // We don't need this function anymore. 
+    });
+
+    render(data);
+
+    function render(data) {
         x.domain(data.map(function (d) { return d.letter; }))
             .paddingInner(0.1)
             .paddingOuter(0.5);
@@ -57,19 +64,23 @@ $(function () {
             .attr("width", x.bandwidth())
             .attr("y", function (d) { return y(d.frequency); })
             .attr("height", function (d) { return height - y(d.frequency); }) 
-    });
-
-    function render(data, category) {
-
     }
 
     // Select all, vowels or consonants
     function select(category) {
+        // You can also change the data set to reflect if every letter is a vowel or a consonant. 
+        var vowels = ['A', 'E', 'I', 'O', 'U'];
+        if(category == 'All letters') {
+            render(data);
+        } else if (category = 'Vowels') {
+            data.filter(function(d) {return vowels.includes(data);})
+        } else if (category = 'Consonants') {
+            data.filter(function(d) {return !vowels.includes(data);})
+        }
         render(data, category)
     }
 
-    console.log(data);
-
+    // Helper function to hcange data type.
     function type(d) {
         d.frequency = +d.frequency;
         return d;
