@@ -1,0 +1,14 @@
+/* CSS for the bar chart you'll make in class */
+
+/* Each bar in the visualization has the class "bar" */
+.bar {
+    fill: steelblue;
+}
+
+/* Add css here to make the bar red when the user hovers over them.  */
+
+.label {
+    fill: black;
+    font: 10px sans-serif;
+    text-anchor: middle;
+}

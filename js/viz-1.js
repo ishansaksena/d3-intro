@@ -16,7 +16,6 @@ $(document).ready(function () {
     console.log("The document was loaded :)");
 
     // $() is shorthand for this. 
-
     $("h1").click(function () {
         // this refers to the DOM element with the id introduction
         console.log("Clicked");
@@ -24,6 +23,8 @@ $(document).ready(function () {
         alert("You clicked on the introduction :)");
     });
 });
+
+
 
 // If it's been a while, read on here to learn more about jquery.
 // https://www.tutorialspoint.com/jquery/jquery-basics.htm
