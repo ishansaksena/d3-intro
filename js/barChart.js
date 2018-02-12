@@ -61,6 +61,14 @@ $(function () {
         // 5. As discussed in lecture, we draw from the top left. 
         //    This is tricky. Take your time to figure out what we should set the height to. 
         //    Hint: You'll have to use height of the canvas from above and the y value. 
+        svg.selectAll(".bar")
+    .data(data)
+    .enter().append("rect")
+    .attr("class", "bar")
+    .attr("x", function (d) { return x(d.letter); })
+    .attr("width", x.bandwidth())
+    .attr("y", function (d) { return y(d.frequency); })
+    .attr("height", function (d) { return height - y(d.frequency); });
         
 
         // Once we're done with this, we'll move can play with basic animations.
